@@ -1,0 +1,349 @@
+extends templates/template.pug
+
+block content
+
+	// .main
+	main.main
+
+
+		section.home-sec
+			.home-blind
+				.container
+					.home-content
+						h1.home-title
+							| Klaar voor de toekomst met 
+							br
+							| glasvezel internet
+						h3.home-subtitle
+							| Snel, stabiel en zonder vervelende storingen
+						a.btn.btn-danger.link-smooth-price(href='#price')
+							| Tarieven &amp; snelheid
+					// home-content
+					// container
+					// home-blind
+		// home-sec
+
+
+
+		section#price.price-section
+			.container
+				a.price-card(href='#0', data-toggle='modal', data-target='#formModal')
+					.price-card-top
+						h4.price-card-title
+							| 1-5 werkplekken
+						img.price-card-img(src='img/speed-scale-1.png', alt='Glasvezel internet')
+						.speed-load
+							p.text-uppercase
+								small
+									i.fa.fa-arrow-down.text-success.pr-1(aria-hidden='true')
+									| download
+							p
+								span.speed-equivalent
+									| 150
+								small
+									| MB/s
+						.speed-load
+							p.text-uppercase
+								small
+									i.fa.fa-arrow-up.text-success.pr-1(aria-hidden='true')
+									| upload
+							p
+								span.speed-equivalent
+									| 150
+								small
+									| MB/s
+						ul.check-list
+							li
+								i.fa.fa-check-square-o.text-success.pr-1(aria-hidden='true')
+								| Gratis Router
+							li
+								i.fa.fa-check-square-o.text-success.pr-1(aria-hidden='true')
+								| Geen installatiekosten
+					// price-card-top
+					.price-card-bottom.text-shadow.bg-pink
+						p.mb-0.fw-300
+							b
+								| €37,
+							|  per maand
+					// price-card-bottom
+				// price-card
+
+
+				a.price-card(href='#0', data-toggle='modal', data-target='#formModal')
+					.price-card-top
+						h4.price-card-title
+							|  6-20 werkplekken
+						img.price-card-img(src='img/speed-scale-2.png', alt='Fiber internet')
+						.speed-load
+							p.text-uppercase
+								small
+									i.fa.fa-arrow-down.text-success(aria-hidden='true')
+									| 										download
+							p
+								span.speed-equivalent
+									| 400
+								small
+									| MB/s
+						.speed-load
+							p.text-uppercase
+								small
+									i.fa.fa-arrow-up.text-success(aria-hidden='true')
+									| 										upload
+							p
+								span.speed-equivalent
+									| 400
+								small
+									| MB/s
+						ul.check-list
+							li
+								i.fa.fa-check-square-o.text-success.pr-1(aria-hidden='true')
+								| Gratis Router
+							li
+								i.fa.fa-check-square-o.text-success.pr-1(aria-hidden='true')
+								| Geen installatiekosten
+					// price-card-top
+					.price-card-bottom.text-shadow.bg-pink
+						p.mb-0.fw-300
+							b
+								| €43,
+							|  per maand
+					// price-card-bottom
+				// price-card
+
+				a.price-card(href='#0', data-toggle='modal', data-target='#formModal')
+					.price-card-top
+						h4.price-card-title
+							| > 20 werkplekken
+						img.price-card-img(src='img/speed-scale-3.png', alt='Tarieven glasvezel')
+						.speed-load
+							p.text-uppercase
+								small
+									i.fa.fa-arrow-down.text-success(aria-hidden='true')
+									| 										download
+							p
+								span.speed-equivalent
+									| 1000
+								small
+									| MB/s
+						.speed-load
+							p.text-uppercase
+								small
+									i.fa.fa-arrow-up.text-success(aria-hidden='true')
+									| 										upload
+							p
+								span.speed-equivalent
+									| 1000
+								small
+									| MB/s
+						ul.check-list
+							li
+								i.fa.fa-check-square-o.text-success.pr-1(aria-hidden='true')
+								| Gratis Router
+							li
+								i.fa.fa-check-square-o.text-success.pr-1(aria-hidden='true')
+								| Geen installatiekosten
+					// price-card-top
+					.price-card-bottom.text-shadow.bg-pink
+						p.mb-0.fw-300
+							b
+								| €74,
+							|  per maand
+					// price-card-bottom
+					// price-card
+
+				a.price-card(href='#0', data-toggle='modal', data-target='#formModal')
+					.price-card-top
+						h4.price-card-title.mb-4
+							| Maatwerk
+						img.price-card-img(src='img/speed-scale-4.png', alt='Maatwerk')
+						h4.price-card-text
+							| Naast onze basispakketten leveren wij ook maatwerk.
+
+					// price-card-top
+					.price-card-bottom.text-shadow.bg-pink
+						p.mb-0.fw-300
+							| Vrijblijvend contact 
+					// price-card-bottom
+					// price-card
+				// container
+		// price-section
+
+
+
+		section.bg-white
+			.container
+				h2.section-title.text-center.mb-5
+					| Opties
+
+
+				.alert-container
+					.alert.alert-primary.m-1(role='alert')
+						h4.alert-heading Vast IP adres
+						hr
+						p.mb-0
+							| € 10,- p.m.
+					.alert.alert-secondary.m-1(role='alert')
+						h4.alert-heading Pin over IP
+						hr
+						p.mb-0
+							| € 7,50 p.m.
+					.alert.alert-success.m-1(role='alert')
+						h4.alert-heading Alarm over IP
+						hr
+						p.mb-0
+							| € 9,- p.m.
+					.alert.alert-danger.m-1(role='alert')
+						h4.alert-heading Zakelijke telefonie
+						hr
+						p.mb-0
+							| Maatwerk
+					.alert.alert-warning.m-1(role='alert')
+						h4.alert-heading WiFi Check
+						hr
+						p.mb-0
+							| Maatwerk
+				///alert-container
+
+			// container
+		// section
+
+
+
+		section.call-action-section
+			.container
+				.media
+					.circle-img.align-self-center.mr-5
+						img(src='img/call-to-action-img-1.png', alt='Bel ons voor een afspraak')
+					.media-body.align-self-center.mr-5
+						h3.section-title.mt-0.mb-0
+							| Kies ook voor een snelle en betrouwbare internetverbinding voor uw bedrijf
+					a.btn.btn-danger.align-self-center(href='tel:+310517414154')
+						| Bel +31 (0) 517 414 154
+				// media
+				// container
+		// call-action-section
+
+
+
+		section.bg-white#waarom-glasvezel
+			.container
+				h2.section-title
+					| Waarom glasvezel?
+				
+
+				.row
+					.col-xl-6
+						.media.media-card
+							img.align-self-start(src='img/future.png', alt='')
+							.media-body.mb-0
+								h4.mt-0 Klaar voor de toekomst?
+								p
+									| De huidige manier van werken (online vergaderen, werken in de cloud, beveiligscamera’s e.d.) vraagt om een snelle en stabiele internetverbinding.
+								p
+									| Voor de nabije toekomst zal de noodzakelijkheid van een snelle internetverbinding nog sterker zijn.
+								p
+									| Een glasvezel verbinding kan met uw snelheidswensen meegroeien.
+								p.mb-0
+									| Met een glasvezelverbinding bent u klaar voor de toekomst.
+					///col
+
+					.col-xl-6
+						.media.media-card
+							img.align-self-start(src='img/fast.png', alt='')
+							.media-body.mb-0
+								h4.mt-0 Stabiel en Snel
+								p
+									| Een glasvezel verbinding met het internet kenmerkt zich door de snelheid maar ook door de stabiliteit van die verbinding.
+								p.mb-0
+									| Glasvezel is een bewezen techniek waardoor je verzekerd bent van een verbinding zonder vervelende storingen.
+					///col
+
+					.col-xl-6
+						.media.media-card
+							img.align-self-start(src='img/upload-download.png', alt='')
+							.media-body.mb-0
+								h4.mt-0 Upload = Download
+								p
+									| Bij de standaard verbindingen is de upload snelheid altijd VEEL lager dan de download snelheid.
+								p
+									| Dat is knap lastig als jij bestanden naar je cloudopslag moet sturen. Dat duurt lang.
+								p.mb-0
+									| Met een glasvezel verbinding heb je dat probleem niet, snel en betrouwbaar gebruik maken van clouddiensten? Kies voor een glasvezel verbinding!
+					///col
+
+					.col-xl-6
+						.media.media-card
+							img.align-self-start(src='img/price.png', alt='')
+							.media-body.mb-0
+								h4.mt-0 Waar voor je geld
+								p
+									| Waarschijnlijk is een nieuwe glasvezel aanbieding net zo duur als je huidige internet aansluiting.
+								p
+									| Glasvezel is echter een stuk sneller en stabieler!
+								p.mb-0
+									| Heb je al een glasvezelverbinding? 
+									br
+									| De kans is erg groot dat je met een aansluiting van Glasvezel Buitenaf een stuk goedkoper bent!
+					///col
+				///row
+
+
+			// container
+		// section
+
+
+
+
+
+		section.call-action-section.text-center
+			.container
+				h3.section-title.mb-5
+					| Welk pakket kiest u?
+
+				.callaction-packages
+					a.callaction-packages-link(href='#0', data-toggle='modal', data-target='#formModal')
+						p.callaction-packages-title.fw-600
+							| 150 MB/s
+						p
+							em
+								| 1-5 werkplekken
+
+					a.callaction-packages-link(href='#0', data-toggle='modal', data-target='#formModal')
+						p.callaction-packages-title.fw-600
+							| 400 MB/s
+						p
+							em
+								| 6-20 werkplekken
+
+					a.callaction-packages-link(href='#0', data-toggle='modal', data-target='#formModal')
+						p.callaction-packages-title.fw-600
+							| 1000 MB/s
+						p
+							em
+								| &gt; 20 werkplekken
+				///callaction-packages
+
+				button.btn.btn-danger(data-toggle='modal', data-target='#formModal')
+					| Ik kies voor maatwerk
+				// container
+		// call-action-section
+
+
+
+
+		///- <div class="container py-5">
+			<h4 class="modal-title smaller modal-subtitle text-left mb-3 pt-4">Signature</h4>
+			<div class="wrapper-signature">
+				<div class="wrapper-signature-pad">
+					<canvas class="signature-pad" id="signature-pad" width="400" height="200"></canvas></div>
+					<button class="btn btn-sm btn-danger" id="draw" type="button">Draw</button>
+					<button class="btn btn-sm btn-danger" id="erase" type="button">Erase</button>
+					<button class="btn btn-sm btn-danger" id="clear" type="button">Clear</button>
+				</div>
+			</div>
+
+
+
+
+	/// .main
+

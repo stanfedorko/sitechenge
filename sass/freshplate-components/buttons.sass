@@ -1,0 +1,41 @@
+
+.btn
+	border: none
+	// font-weight: 600
+	padding: 7px 20px
+	letter-spacing: 0.3px
+	position: relative
+	// box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2)
+	+hfa
+		box-shadow: none
+		cursor: pointer
+
+.btn:focus,
+button:focus
+	outline: none !important
+
+.btn-secondary
+  color: #fff
+
+.btn-accordion
+	width: 100%
+	max-width: 100%
+	text-decoration: none
+	display: flex
+	align-items: center
+	color: $secondary
+	&:focus
+		text-decoration: none
+		outline: none
+		box-shadow: none
+	&:hover
+		text-decoration: none
+		outline: none
+		box-shadow: none
+		color: $success
+	&.collapsed .fa-angle-up
+		transform: rotate(180deg)
+	.fa-angle-up
+		font-weight: 300
+		+rem(26)
+		margin: 0

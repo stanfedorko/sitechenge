@@ -1,0 +1,52 @@
+// .header - _header.pug
+header#home.header
+	.header-container
+		.container-fluid
+			nav.navbar.custom-nav.navbar-expand-xl
+				a.navbar-brand.link-smooth(href='#0')
+					| Sitechange
+				.mobile-nav-bg
+				.navbar-collapse.mobile-nav
+					button.navbar-toggler.js-navbar-toggler.show-menu(type='button')
+						span.navbar-toggler-icon(data-toggle="tooltip" data-placement="bottom" title="Toggle nav")
+							span.top-line
+							span.middle-line
+							span.bottom-line
+					form.form-inline.my-2.my-lg-0.form-search
+						input.form-control.mr-sm-2.rounded-pill(type='search', placeholder='Search', aria-label='Search')
+						button.btn.form-search-btn(type='submit')
+							i.fa.fa-search.mr-2(aria-hidden='true')
+					a.btn.btn-dark.rounded-pill.btn-sm
+						i.fa.fa-plus.mr-2(aria-hidden='true')
+						| Add Customer
+					ul.navbar-nav.ml-auto.align-items-center
+						li.nav-item
+							a.nav-link(href='#0') Account
+						li.nav-item
+							a.nav-link(href='#0') Settings 
+						li.nav-item.dropdown
+							a#userDropdown.nav-link.dropdown-toggle.user-dropdown(href='#0', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+								img.user-avatar(src="img/user-avatar.jpg", alt="")
+								| Bradley Haynes
+							.dropdown-menu(aria-labelledby='userDropdown')
+								a.dropdown-item(href='#0') Lorem
+								a.dropdown-item(href='#0') Lorem ipsum
+								.dropdown-divider
+								a.dropdown-item(href='#0') Lorem ipsum dolor
+				/// navbar-collapse
+			/// navbar
+		/// container
+	/// header-container
+
+
+
+/// .header
+
+
+
+
+
+
+
+
+

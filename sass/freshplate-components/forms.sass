@@ -1,0 +1,53 @@
+label
+  +rem(14)
+  font-weight: 600
+  margin-bottom: 16px
+
+form
+  a 
+    +rem(14)
+  .btn:hover
+    cursor: pointer
+
+.form-title
+  margin-bottom: 40px
+  text-align: center
+
+
+// placeholder styles
+::-webkit-input-placeholder 
+  font-size: 14px !important
+  color: $secondary !important
+:-moz-placeholder 
+  font-size: 14px !important
+  color: $secondary !important
+::-moz-placeholder
+  font-size: 14px !important
+  color: $secondary !important
+
+.form-group
+  margin-bottom: 26px
+
+.form-control
+  height: calc(1.5em + 0.75rem + 8px)
+  // border-color: #fff
+  border-color: #d5d5d5
+  &:focus
+    box-shadow: none
+    border-color: $dark
+.custom-control
+  margin-bottom: 40px
+.custom-control-input
+  height: 22px
+.custom-control-label::before
+  top: 3px
+  box-shadow: rgba(0,0,0,0.15) 0px 1px 3px 0
+.custom-control-label::after
+  top: 3px
+.custom-control-input:checked ~ .custom-control-label::before
+  background-color: $success
+  border-color: $success
+
+textarea.form-control
+  width: 100%
+  max-width: 980px

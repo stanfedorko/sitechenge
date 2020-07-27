@@ -1,0 +1,22 @@
+//- Main template
+
+//- Pug mixins
+include ../abstracts/mixins/_mixins.pug
+
+
+doctype
+html(lang="en")
+
+	include ../components/_head.pug
+
+	body
+
+		include ../components/_header.pug
+
+		block content
+
+
+		include ../components/_footer.pug
+		include ../components/_modal.pug
+		include ../components/_scripts.pug
+

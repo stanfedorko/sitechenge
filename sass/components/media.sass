@@ -1,0 +1,86 @@
+@media (min-width: 1200px)
+	.container 
+		max-width: 1270px
+
+	.container.bigger
+		max-width: 1560px
+
+
+
+
+@media screen and (max-width: 1199px)
+
+	.section-title
+		br
+			display: none
+
+
+
+
+
+@media screen and (max-width: 991px)
+
+	h1
+		+rem(48)
+
+	h2
+		+rem(32)
+		&.smaller
+			+rem(32)
+
+	h3
+		+rem(30)
+		&.smaller
+			+rem(30)
+
+	.mobile-pb-0
+		padding-bottom: 0 !important
+
+
+
+
+
+
+
+@media screen and (max-width: 767px)
+	html
+		+rem(14)
+
+	.section-title
+		margin-bottom: 10px
+
+	.section-title.bigger-margin-b
+		margin-bottom: 20px
+
+	.section-subtitle
+		margin-bottom: 5px
+
+	.custom-hr
+		margin-bottom: 24px
+
+	section
+		padding: 50px 0
+
+	section.section-bigger-pad
+		padding: 70px 0
+
+
+
+@media screen and (max-width: 375px)
+	h1
+		+rem(28)
+
+	h2
+		+rem(26)
+		&.smaller
+			+rem(26)
+
+	h3
+		+rem(22)
+		&.smaller
+			+rem(22)
+	
+	h4
+		+rem(18)
+		&.smaller
+			+rem(18)

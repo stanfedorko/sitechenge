@@ -1,0 +1,35 @@
+extends templates/template-login.pug
+
+block content
+
+	// .main
+	main.main
+		section.section-login
+			.container
+				form.form-login
+					h5.form-title
+						| Sign In
+					.form-group
+						label(for='exampleInputEmail1') Email address
+						input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Your email address…')
+					.form-group
+						.row
+							.col-sm-6
+								label(for='exampleInputPassword1') Password
+							.col-sm-6.text-right
+								a(href="#0").text-success
+									| Forgot password?
+							.col-sm-12
+								input#exampleInputPassword1.form-control(type='password', placeholder='Enter your password')
+					.custom-control.custom-checkbox
+						input#customCheck1.custom-control-input(type='checkbox')
+						label.custom-control-label(for='customCheck1') Check this custom checkbox
+					//- .form-group.form-check
+					//- 	input#exampleCheck1.form-check-input(type='checkbox')
+					//- 	label.form-check-label(for='exampleCheck1') Check me out
+					button.btn.btn-success.w-100(type='submit') Login
+				/// form-login
+			///container
+		///section-login
+	/// .main
+

@@ -1,0 +1,456 @@
+
+// MIXINS
+
+// BASE FONT SIZE
+$fontSizeBase: 16
+
+=rem($fontSize)
+	/*#{$fontSize}px*/
+	font-size: ($fontSize/$fontSizeBase) + rem
+
+
+=fw($value)
+	.fw#{$value}
+		font-weight: $value
+
+// rounded corners
+=r($radius)
+	border-radius: $radius+px
+
+// rounded corners on top
+=rt($radius)
+	border-top-right-radius: $radius+px
+	border-top-left-radius: $radius+px
+
+// rounded corners on bottom
+=rb($radius)
+	border-bottom-right-radius: $radius+px
+	border-bottom-left-radius: $radius+px
+
+// HOVER AND FOCUS STATE
+=hf
+	&:hover, &:focus
+		@content
+
+// Hover
+=h
+	&:hover
+		@content
+
+// Focus
+=fc
+	&:focus
+		@content
+
+
+
+// color and background classes
+=cbg($class, $color)
+	.color-#{$class}
+		color: $color !important
+
+	.bg-#{$class}
+		background-color: $color !important
+
+	a.color-#{$class}
+		+hf
+			color: $color !important
+
+
+// HOVER, FOCUS, ACTIVE (FOUNDATION)
+=hfa
+	& > a:hover,
+	& > a:focus,
+	&.is-active > a
+		@content
+
+=in
+	display: inline-block
+	vertical-align: top
+
+=md
+	display: inline-block
+	vertical-align: middle
+
+=ts($transition)
+	-webkit-transition: $transition
+	transition: $transition
+
+=ct
+	content: ''
+	display: block
+
+=ln($colors)
+	background: -webkit-linear-gradient($colors)
+	background: linear-gradient($colors)
+
+=lnl($colors)
+	background: -webkit-linear-gradient(left, $colors)
+	background: linear-gradient(to right, $colors)
+
+=lnr($colors)
+	background: -webkit-linear-gradient(right, $colors)
+	background: linear-gradient(to left, $colors)
+
+=tf($value)
+	-webkit-transform: $value
+	-ms-transform: $value
+	transform: $value
+
+=trans
+	transition: all .3s ease-in-out
+
+=trans-2
+	transition: all .15s ease-in-out
+
+
+// BG
+=bg-img
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center center
+
+
+// MAIN TRANSITION EFFECT FOR CSS ANIMATIONS
+=tm
+	+ts(all $transition-time ease-out)
+
+
+// dots when text is longer than element
+=dots
+	display: block
+	max-width: 100%
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis
+
+=mxa
+	margin-right: auto
+	margin-left: auto
+
+// horizontally centered element
+=hc
+	display: block
+	margin-right: auto
+	margin-left: auto
+
+
+
+=t-shadow
+	text-shadow: 0px 0px 1px rgba(0, 0, 0, 1)
+
+=t-shadow-2
+	text-shadow: 0px 0px 1px #6b6b6b
+
+=t-shadow-3
+	text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5)
+
+
+=act
+	&:active,
+	&.active
+		@content
+
+// all but not last
+=nl
+	&:not(:last-child)
+		@content
+
+// all but not first
+=nf
+	&:not(:first-child)
+		@content
+
+// this last child
+=l
+	&:last-child
+		@content
+
+// this first child
+=f
+	&:first-child
+		@content
+		@content
+
+// in this last item
+=li
+	*:last-child
+		@content
+
+// in this first item
+=fi
+	*:first-child
+		@content
+
+=abs
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+
+
+
+// BREAKPOINTS
+
+=min1600
+	@media print, screen and (min-width: 1600px)
+		@content
+	/*min-width: 1600px END*/
+
+=min1200
+	@media print, screen and (min-width: 1200px)
+		@content
+	/*min-width: 1200px END*/
+
+=min1024
+	@media print, screen and (min-width: 1024px)
+		@content
+	/*min-width: 1024px END*/
+
+=min992
+	@media print, screen and (min-width: 992px)
+		@content
+	/*min-width: 992px END*/	
+
+=min768
+	@media print, screen and (min-width: 768px)
+		@content
+	/*min-width: 768px END*/	
+
+=min640
+	@media print, screen and (min-width: 640px)
+		@content
+	/*min-width: 768px END*/	
+
+=min576
+	@media print, screen and (min-width: 576px)
+		@content
+	/*min-width: 768px END*/
+
+
+
+
+=max1199
+	@media print, screen and (max-width: 1199px)
+		@content
+	/*max-width: 1199pxEND*/
+
+=max1023
+	@media print, screen and (max-width: 1023px)
+		@content
+	/*max-width: 1199pxEND*/
+
+=max991
+	@media print, screen and (max-width: 991px)
+		@content
+	/*max-width: 991px END*/
+
+=max767
+	@media print, screen and (max-width: 767px)
+		@content
+	/*max-width: 767px END*/
+
+=max639
+	@media print, screen and (max-width: 639px)
+		@content
+	/*max-width: 639px END*/
+
+=max575
+	@media print, screen and (max-width: 575px)
+		@content
+	/*max-width: 575px END*/
+
+
+
+
+=min768-max991
+	@media print, screen and (min-width: 768px) and (max-width: 991px)
+		@content
+	/*(min-width: 768px) and (max-width: 991px) END*/
+
+=min640-max1023
+	@media print, screen and (min-width: 640px) and (max-width: 1023px)
+		@content
+	/*(min-width: 640px) and (max-width: 1023px) END*/
+
+
+
+
+// selected text properties
+=sl($color)
+	::moz-selection
+		background: $color
+
+	::selection
+		background: $color
+
+=cl
+	&:before,
+	&:after
+		+ct
+		clear: both
+
+=z($number)
+	@for $i from 1 through $number
+		.z#{$i}
+			z-index: $i
+
+=rem($font-size)
+	/*#{$font-size}px*/
+	font-size: ($font-size/$font-size-base-custom) + rem
+
+=remXl($font-size)
+	/*#{$font-size}px*/
+	font-size: ($font-size/$font-size-base-custom-xl) + rem
+
+=remPhone($font-size)
+	/*#{$font-size}px*/
+	font-size: ($font-size/$font-size-base-mobile) + rem
+
+=radial($color1, $color2)
+	background-image: $color2
+	background-image: -webkit-radial-gradient($color1, $color2)
+	background-image: radial-gradient($color1, $color2)
+
+=keys($name)
+	@-webkit-keyframes #{$name}
+		@content
+
+	@keyframes #{$name}
+		@content
+
+=anim($value)
+	-webkit-animation: $value
+	animation: $value
+
+=ns
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+=nw
+	white-space: nowrap
+
+=nwf
+	flex-flow: nowrap
+
+=an
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+
+
+// Foundation Columns
+// =custom-columns($class, $quantity)
+// 	@for $i from 1 through $quantity
+// 		.#{$class}-#{$i}
+// 			width: 100/($quantity/$i)+%
+
+
+=column-centered($class)
+	.#{$class}-centered,
+	.#{$class}-centered:last-child:not(:first-child)
+		float: none
+		clear: both
+
+	.#{$class}-centered
+		+mxa
+
+=column-uncentered($class)
+	.#{$class}-uncentered,
+	.#{$class}-uncentered:last-child:not(:first-child)
+		position: static
+		float: left
+		margin-left: 0
+		margin-right: 0
+		clear: none
+
+
+// placeholder
+=ph($color)
+	input,
+	textarea
+		&::-webkit-input-placeholder
+			color: $color
+		&::-moz-placeholder
+			color: $color
+		&:-ms-input-placeholder
+			color: $color
+		&::placeholder
+			color: $color
+
+
+// placeholder this
+=pht($color)
+	&::-webkit-input-placeholder
+		color: $color
+	&::-moz-placeholder
+		color: $color
+	&:-ms-input-placeholder
+		color: $color
+	&::placeholder
+		color: $color
+
+
+// crossbrowser font mixin
+=font($file, $family, $weight, $style)
+	@font-face
+		font-family: $family
+		src: local($family), url("../fonts/" + $file) format("woff")
+		font-weight: $weight
+		font-style: $style
+
+=a
+	&:after
+		@content
+
+=b
+	&:before
+		@content
+
+// =titles-color-inherit
+// 	&
+// 		h1, h2, h3, h4, h5, h6
+// 			color: inherit
+
+=hd
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+		@content
+
+
+=p($value)
+	padding: $value
+
+=px($value)
+	padding-right: $value
+	padding-left: $value
+
+=py($value)
+	padding-top: $value
+	padding-bottom: $value
+	
+=m($value)
+	margin: $value
+	
+=mx($value)
+	margin-right: $value
+	margin-left: $value
+
+=my($value)
+	margin-top: $value
+	margin-bottom: $value
+
+// =outline
+// 	&:focus
+// 		outline: $border 1px dotted
+
+
+
+
+
+
+
+	

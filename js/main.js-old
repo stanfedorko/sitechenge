@@ -1,0 +1,111 @@
+$(document).ready(function() {
+
+
+	// smaller menu
+	$(window).scroll(function() {
+		if ($(document).scrollTop() > 100) {
+			$('.header-bottom').addClass('smaller-menu');
+	
+		}
+		else {
+			$('.header-bottom').removeClass('smaller-menu'); }
+		});
+	
+	
+		$(window).scroll(function() {
+		if ($(document).scrollTop() > 100) {
+			$('.header-bottom').addClass('show');
+	
+		}
+		else {
+			$('.header-bottom').removeClass('show'); }
+		});
+	
+	
+	
+	
+		$('.nav-link').click(function() {
+			$('.mobile-nav, .mobile-nav-bg').removeClass('show');
+			$('body').removeClass('no-scroll');
+		});
+	
+	
+	
+		$('.mobile-nav-bg').click(function() {
+			$('.mobile-nav-bg, .mobile-nav').removeClass('show');
+			$('body').removeClass('no-scroll');
+		});
+	
+		$('.show-menu').on('click', function() {
+			$('.mobile-nav, .mobile-nav-bg').toggleClass('show');
+			$('body').toggleClass('no-scroll');
+		});
+	
+	
+		$('.navbar-toggler').on('click', function() {
+			$('.navbar-toggler').toggleClass('active');
+		});
+		$('.mobile-nav-bg, .nav-link').click(function() {
+			$('.navbar-toggler').removeClass('active');
+		});
+
+	
+	
+	
+	
+	
+	// SEND FORM
+		$(document).ready(function () {
+			$("form").submit(function () {
+				var formID = $(this).attr('id');
+				var formNm = $('#' + formID);
+				$.ajax({
+					type: "POST",
+					url: 'contact-send.php',
+					data: formNm.serialize(),
+					success: function (data) {
+						$(formNm).html(data);
+					},
+					error: function (jqXHR, text, error) {
+						$(formNm).html(error);
+					}
+				});
+				return false;
+			});
+		});
+	
+	
+	
+	
+	// SMOOTH SCROLL TO ANCHOR
+		$('.link-smooth').click(function(event) {
+			$('body, html').animate({
+				scrollTop: $( $.attr(this, 'href') ).offset().top-30
+			}, 900);
+			event.preventDefault();
+		});
+	
+	
+	// SMOOTH SCROLL PRICE
+		$('.link-smooth-price').click(function(event) {
+			$('body, html').animate({
+				scrollTop: $( $.attr(this, 'href') ).offset().top-100
+			}, 900);
+			event.preventDefault();
+		});
+	
+	
+	// SMOOTH SCROLL PRICE
+		$('.link-smooth-tab').click(function(event) {
+			$('body, html').animate({
+				scrollTop: $( $.attr(this, 'href') ).offset().top-50
+			}, 900);
+			event.preventDefault();
+		});
+	
+	
+	
+	
+	
+
+});

@@ -1,0 +1,29 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "Gulp.js Template for Design to HTML Work. SASS/Pug Compilcation, Server/Livereload, Images Optimization, CSS minification.",
+  "main": "gulpfile.js",
+  "scripts": {},
+  "author": "Fedir Kopakov",
+  "license": "",
+  "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "gulp": "^3.9.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-filter": "^4.0.0",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-image": "^4.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-pug": "^3.0.4",
+    "gulp-pug-inheritance": "^0.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sourcemaps": "^1.6.0",
+    "npm": "^6.9.0",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "sass-convert": "^0.5.2"
+  }
+}

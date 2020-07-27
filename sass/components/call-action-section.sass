@@ -1,0 +1,52 @@
+.call-action-section
+	background-color: #f8f8f8
+
+
+.callaction-packages
+	display: flex
+	justify-content: space-around
+	margin-bottom: 30px
+	&-title
+		color: $danger
+		+trans-2
+		+rem(44)
+		line-height: 42px
+		@include media-breakpoint-down(sm)
+			line-height: 30px
+			+rem(32)
+		@include media-breakpoint-down(xs)
+			line-height: 22px
+			+rem(24)
+	&-link
+		text-align: center
+		display: inline-block
+		padding: 15px
+		@include media-breakpoint-down(xs)
+			+rem(13)
+			line-height: 12px
+		&:hover
+			text-decoration: none
+			color: $success 
+		&:hover .callaction-packages-title
+			color: $success 
+
+
+
+
+@media screen and (max-width: 991px)
+	.media
+		display: block 
+		text-align: center
+
+	.circle-img
+		margin-bottom: 15px
+		margin-right: 0 !important
+		display: inline-block
+
+	.media-body
+		margin-bottom: 30px
+		margin-right: 0 !important
+
+
+
+
