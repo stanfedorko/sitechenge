@@ -4,7 +4,31 @@ block content
 
 	// .main
 	main.main.js-main
+		.mobile-nav-bg.js-mobile-nav-bg.d-xl-none
 		.sidenav.js-sidenav
+			.mobile-nav.d-xl-none
+				form.form-inline.mb-3.form-search
+					input.form-control.mr-sm-2.rounded-pill(type='search', placeholder='Search', aria-label='Search')
+					button.btn.form-search-btn(type='submit')
+						i.fa.fa-search.mr-2(aria-hidden='true')
+				a.btn.btn-success.rounded-pill.btn-sm.mb-3
+					i.fa.fa-plus.mr-2(aria-hidden='true')
+					| Add Customer
+				ul.navbar-nav
+					li.nav-item
+						a.nav-link.js-nav-link(href='#0') Account
+					li.nav-item
+						a.nav-link.js-nav-link(href='#0') Settings 
+					li.nav-item.dropdown
+						a#userDropdown.nav-link.dropdown-toggle.user-dropdown(href='#0', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							img.user-avatar(src="img/user-avatar.jpg", alt="")
+							| Bradley Haynes
+						.dropdown-menu(aria-labelledby='userDropdown')
+							a.dropdown-item.js-nav-link(href='#0') Lorem
+							a.dropdown-item.js-nav-link(href='#0') Lorem ipsum
+							.dropdown-divider
+							a.dropdown-item.js-nav-link(href='#0') Lorem ipsum dolor
+			///mobile-nav
 			ul.sidenav-list
 				li.sidenav-item.mb-4
 					.row
@@ -15,41 +39,41 @@ block content
 							span.nav-subtitle
 								| 1 hour ago
 				li.sidenav-item
-					a(href="#0").sidenav-link.active
+					a(href="#0").sidenav-link.js-nav-link.active
 						| Home
 						i.fa.fa-clock-o.ml-3(aria-hidden="true")
 				li.sidenav-item
-					a(href="#0").sidenav-link
+					a(href="#0").sidenav-link.js-nav-link
 						| About
 				li.sidenav-item
-					a(href="#0").sidenav-link
+					a(href="#0").sidenav-link.js-nav-link
 						| Product
 				li.sidenav-item
-					a(href="#0").sidenav-link
+					a(href="#0").sidenav-link.js-nav-link
 						| Blog
 				li.sidenav-item
-					a(href="#0").sidenav-link
+					a(href="#0").sidenav-link.js-nav-link
 						| Custom
 				li.sidenav-item
-					a(href="#0").sidenav-link
+					a(href="#0").sidenav-link.js-nav-link
 						i.fa.fa-plus.mr-2(aria-hidden="true")
 						| Add page
 			///sidenav-list
 			ul.secondary-sidenav-list
 				li.sidenav-item
-					a(href="#0").sidenav-link
+					a(href="#0").sidenav-link.js-nav-link
 						| Acme Company
 						i.fa.fa-circle.text-success.ml-2(aria-hidden="true")
 				li.sidenav-item
-					a(href="#0").sidenav-link
+					a(href="#0").sidenav-link.js-nav-link
 						| Joe’s Plumbing
 						i.fa.fa-circle.text-success.ml-2(aria-hidden="true")
 				li.sidenav-item
-					a(href="#0").sidenav-link
+					a(href="#0").sidenav-link.js-nav-link
 						| Eric’s Electric
 						i.fa.fa-circle.text-success.ml-2(aria-hidden="true")
 				li.sidenav-item
-					a(href="#0").sidenav-link
+					a(href="#0").sidenav-link.js-nav-link
 						| Bill the Builder
 						i.fa.fa-check.ml-2(aria-hidden="true")
 			///sidenav-list
@@ -57,11 +81,11 @@ block content
 		section.section.p-0
 			.subsection.bg-grey
 				.container
-					.media.align-items-center
-						img.align-self-center.mr-4.rounded-circle.img-width-60(src='img/media-img.jpg', alt='')
+					.media.align-items-center.d-block.d-sm-flex
+						img.align-self-center.mb-3.mb-sm-0.mr-0.mr-sm-4.rounded-circle.img-width-60(src='img/media-img.jpg', alt='')
 						.media-body
 							h4.mt-0 ABC Company
-							ul.list-inline.mb-0
+							ul.list-inline.mb-3.mb-sm-0
 								li.list-inline-item.mr-4
 									i.fa.fa-clock-o.mr-2(aria-hidden="true")
 									| 2 hours remaining
@@ -84,9 +108,9 @@ block content
 						| Change Request #2 to Home Page
 					p.mb-5
 						| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-					.d-flex.justify-content-start.mb-5
-						img.img-width-200.mr-5(src="img/company-img-01.jpg", alt="")
-						img.img-width-200(src="img/company-img-02.jpg", alt="")
+					.images-block.mb-4
+						img.img-width-200.m-2(src="img/company-img-01.jpg", alt="")
+						img.img-width-200.m-2(src="img/company-img-02.jpg", alt="")
 				///container
 			///subsection
 
@@ -156,7 +180,7 @@ block content
 			///subsection
 
 
-			.subsection
+			.subsection.pb-0
 				.container
 					form.form-comment
 						.form-group
@@ -164,8 +188,8 @@ block content
 						.custom-control.custom-checkbox
 							input#customCheck1.custom-control-input(type='checkbox')
 							label.custom-control-label.fw-300(for='customCheck1') Private Comment
-						button.btn.btn-success.rounded-pill.mr-4(type='submit') Reply
-						button.btn.btn-secondary.rounded-pill(type='submit') Reply and Complete
+						button.btn.btn-success.rounded-pill.mr-4.mb-4(type='submit') Reply
+						button.btn.btn-secondary.rounded-pill.mb-4(type='submit') Reply and Complete
 				///container
 			///subsection
 
@@ -177,18 +201,22 @@ block content
 							.container
 								h2.mb-0
 									button.btn.btn-link.btn-accordion(type='button', data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
-										i.fa.fa-check.mr-2(aria-hidden="true")
-										span.mr-auto
-											| Change Request #1 to Home Page
-										span.fw-300
-											| Completed on Dec 19, 2017 at 3:59pm
-										i.fa.fa-angle-up.ml-2(aria-hidden="true")
+										i.fa.fa-check.mr-3(aria-hidden="true")
+										span.row.w-100
+											span.col-md-6.text-left
+												span.mr-auto
+													| Change Request #1 to Home Page
+											span.col-md-6.text-left.text-md-right
+												span.fw-300
+													| Completed on Dec 19, 2017 at 3:59pm
+										///row
+										i.fa.fa-angle-up.ml-3(aria-hidden="true")
 						#collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#accordionExample')
 							.container
-								.card-body
+								.card-body.px-0
 									p.mb-5
 										| Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam ipsa nihil? Aliquid vitae quam corrupti dicta ducimus magnam temporibus accusantium odit quae maiores explicabo blanditiis, deleniti ratione voluptatum. Architecto nobis cumque dolorem eligendi dolore temporibus neque illum quis accusantium ad. Velit cum incidunt cumque esse at explicabo eligendi maxime.
-									.d-flex.justify-content-start.mb-5
+									.images-block.mb-4
 										img.img-width-200.mr-5(src="img/company-img-01.jpg", alt="")
 										img.img-width-200(src="img/company-img-02.jpg", alt="")
 									button.btn.btn-secondary.rounded-pill
@@ -200,18 +228,22 @@ block content
 							.container
 								h2.mb-0
 									button.btn.btn-link.btn-accordion.collapsed(type='button', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
-										i.fa.fa-check.mr-2(aria-hidden="true")
-										span.mr-auto
-											| Change Request #2 to Home Page
-										span.fw-300
-											| Completed on Dec 20, 2017 at 13:59pm
-										i.fa.fa-angle-up.ml-2(aria-hidden="true")
+										i.fa.fa-check.mr-3(aria-hidden="true")
+										span.row.w-100
+											span.col-md-6.text-left
+												span.mr-auto
+													| Change Request #2 to Home Page
+											span.col-md-6.text-left.text-md-right
+												span.fw-300
+													| Completed on Dec 12, 2017 at 4:29pm
+										///row
+										i.fa.fa-angle-up.ml-3(aria-hidden="true")
 						#collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordionExample')
 							.container
-								.card-body
+								.card-body.px-0
 									p.mb-5
 										| Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam ipsa nihil? Aliquid vitae quam corrupti dicta ducimus magnam temporibus accusantium odit quae maiores explicabo blanditiis, deleniti ratione voluptatum. Architecto nobis cumque dolorem eligendi dolore temporibus neque illum quis accusantium ad. Velit cum incidunt cumque esse at explicabo eligendi maxime.
-									.d-flex.justify-content-start.mb-5
+									.images-block.mb-4
 										img.img-width-200.mr-5(src="img/company-img-01.jpg", alt="")
 										img.img-width-200(src="img/company-img-02.jpg", alt="")
 									button.btn.btn-secondary.rounded-pill
@@ -223,18 +255,22 @@ block content
 							.container
 								h2.mb-0
 									button.btn.btn-link.btn-accordion.collapsed(type='button', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
-										i.fa.fa-check.mr-2(aria-hidden="true")
-										span.mr-auto
-											| Change Request #3 to Home Page
-										span.fw-300
-											| Completed on Dec 21, 2017 at 3:59pm
-										i.fa.fa-angle-up.ml-2(aria-hidden="true")
+										i.fa.fa-check.mr-3(aria-hidden="true")
+										span.row.w-100
+											span.col-md-6.text-left
+												span.mr-auto
+													| Change Request #3 to Home Page
+											span.col-md-6.text-left.text-md-right
+												span.fw-300
+													| Completed on Dec 10, 2017 at 6:49pm
+										///row
+										i.fa.fa-angle-up.ml-3(aria-hidden="true")
 						#collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordionExample')
 							.container
-								.card-body
+								.card-body.px-0
 									p.mb-5
 										| Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam ipsa nihil? Aliquid vitae quam corrupti dicta ducimus magnam temporibus accusantium odit quae maiores explicabo blanditiis, deleniti ratione voluptatum. Architecto nobis cumque dolorem eligendi dolore temporibus neque illum quis accusantium ad. Velit cum incidunt cumque esse at explicabo eligendi maxime.
-									.d-flex.justify-content-start.mb-5
+									.images-block.mb-4
 										img.img-width-200.mr-5(src="img/company-img-01.jpg", alt="")
 										img.img-width-200(src="img/company-img-02.jpg", alt="")
 									button.btn.btn-secondary.rounded-pill

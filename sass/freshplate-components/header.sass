@@ -3,7 +3,7 @@
 	min-height: 80px
 	box-shadow: 0px 0px 26.73px 0.27px rgba(29, 29, 29, 0.15)
 	position: fixed
-	z-index: 999
+	z-index: 1000
 	left: 0
 	right: 0
 	top: 0
@@ -16,26 +16,29 @@
 		+trans
 		box-shadow 0px 0px 26.73px 0.27px rgba(29, 29, 29, 0.15)
 
-// .mobile-nav-bg
-// 	background-color: rgba(0,0,0,0.6)
-// 	position: fixed
-// 	top: 0
-// 	right: 0
-// 	bottom: 0
-// 	left: 0
-// 	z-index: 998
-// 	display: none
-// 	transition: all .5s ease-in-out
+.mobile-nav-bg
+	background-color: rgba(0,0,0,0.6)
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 998
+	display: none
+	transition: all .5s ease-in-out
 
 
-// .mobile-nav-bg.show
-// 	display: block
+.mobile-nav-bg.show
+	display: block
 
 .navbar-expand-xl .navbar-toggler
 	display: inline-block
 	margin-right: 40px
-	margin-left: 140px
+	margin-left: 165px
 	padding: 0.25rem
+	@include media-breakpoint-down(lg)
+		margin-left: auto
+		margin-right: 0px
 
 .custom-nav
 	padding: 0
@@ -84,6 +87,9 @@
 
 	.navbar-collapse
 		z-index: 999
+		flex-basis: auto
+		@include media-breakpoint-down(lg)
+			flex-grow: inherit
 
 	.navbar-nav 
 		.nav-link
@@ -220,81 +226,81 @@
 
 
 
-@media screen and (max-width: 1199px)
+// @media screen and (max-width: 1199px)
 
-	.header-container
-		.container
-			width: 100%
-			max-width: 100%
+// 	.header-container
+// 		.container
+// 			width: 100%
+// 			max-width: 100%
 
-	.header 
-		.navbar-nav
-			background-color: transparent
-			margin-bottom: 15px
+// 	.header 
+// 		.navbar-nav
+// 			background-color: transparent
+// 			margin-bottom: 15px
 
-	.custom-nav
-		.navbar-toggler
-			z-index: 999
-			border: none
-			background-color: transparent
+// 	.custom-nav
+// 		.navbar-toggler
+// 			z-index: 999
+// 			border: none
+// 			background-color: transparent
 
-		.navbar-collapse
-			background-color: rgba(0,0,0,0.8)
-			position: fixed
-			left: 0
-			top: 0
-			height: 100vh
-			width: 200px
-			padding-top: 10px
-			padding-bottom: 50px
-			padding-left: 15px
-			transition: all .5s ease-in-out
-			z-index: 1003
+		// .navbar-collapse
+		// 	background-color: rgba(0,0,0,0.8)
+		// 	position: fixed
+		// 	left: 0
+		// 	top: 0
+		// 	height: 100vh
+		// 	width: 200px
+		// 	padding-top: 10px
+		// 	padding-bottom: 50px
+		// 	padding-left: 15px
+		// 	transition: all .5s ease-in-out
+		// 	z-index: 1003
 
-		.mobile-nav
-			left: -220px
-			opacity: 0
-			.mobile-btn-item
-				padding-left: 0
+		// .mobile-nav
+		// 	left: -220px
+		// 	opacity: 0
+		// 	.mobile-btn-item
+		// 		padding-left: 0
 
-		.mobile-nav.show
-			left: 0
-			opacity: 1
-			.mobile-btn-item
-				padding-left: 0
+		// .mobile-nav.show
+		// 	left: 0
+		// 	opacity: 1
+		// 	.mobile-btn-item
+		// 		padding-left: 0
 
-		.navbar-nav 
-			.nav-item
-				margin-bottom: 10px
-			.nav-link
-				color: #fff
-				margin: 0
-
-
-
-	.custom-nav .navbar-nav .nav-link:focus, .custom-nav .navbar-nav .nav-link:hover
-		color: #fff
-
-	.custom-nav .navbar-nav .active>.nav-link, .custom-nav .navbar-nav .nav-link.active, .custom-nav .navbar-nav .nav-link.show, .custom-nav .navbar-nav .show>.nav-link
-		color: #fff
+	// 	.navbar-nav 
+	// 		.nav-item
+	// 			margin-bottom: 10px
+	// 		.nav-link
+	// 			color: #fff
+	// 			margin: 0
 
 
 
+	// .custom-nav .navbar-nav .nav-link:focus, .custom-nav .navbar-nav .nav-link:hover
+	// 	color: #fff
 
-
-@media screen and (max-width: 991px)
-
-	.custom-nav 
-		.navbar-toggler-icon
-			width: 27px
-			height: 20px
+	// .custom-nav .navbar-nav .active>.nav-link, .custom-nav .navbar-nav .nav-link.active, .custom-nav .navbar-nav .nav-link.show, .custom-nav .navbar-nav .show>.nav-link
+	// 	color: #fff
 
 
 
-@media screen and (max-width: 767px)
 
-	.custom-nav
-		padding: 0
+
+// @media screen and (max-width: 991px)
+
+// 	.custom-nav 
+// 		.navbar-toggler-icon
+// 			width: 27px
+// 			height: 20px
+
+
+
+// @media screen and (max-width: 767px)
+
+// 	.custom-nav
+// 		padding: 0
 
 
 
@@ -304,16 +310,16 @@
 // 		min-height: 120px
 
 
-@media screen and (max-width: 475px)
+// @media screen and (max-width: 475px)
 
-	.navbar-brand
-		top: -8px
+// 	.navbar-brand
+// 		top: -8px
 
-	.custom-nav
-		padding: 0
-		min-height: 50px
-		.navbar-toggler
-			padding-right: 3px
+// 	.custom-nav
+// 		padding: 0
+// 		min-height: 50px
+// 		.navbar-toggler
+// 			padding-right: 3px
 
 	// .header
 	// 	min-height: 115px
@@ -325,13 +331,13 @@
 
 
 
-@media screen and (max-width: 424px)
-	.phone-link-sticky
-		padding: 6px 20px
-		span
-			display: none
-		.fa
-			+rem(24)
+// @media screen and (max-width: 424px)
+// 	.phone-link-sticky
+// 		padding: 6px 20px
+// 		span
+// 			display: none
+// 		.fa
+// 			+rem(24)
 
 
 // end header media

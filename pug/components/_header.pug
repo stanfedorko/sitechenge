@@ -5,21 +5,21 @@ header#home.header
 			nav.navbar.custom-nav.navbar-expand-xl
 				a.navbar-brand.link-smooth(href='#0')
 					| Sitechange
-				.mobile-nav-bg
-				.navbar-collapse.mobile-nav
+				.navbar-collapse
 					button.navbar-toggler.js-navbar-toggler.show-menu(type='button')
-						span.navbar-toggler-icon(data-toggle="tooltip" data-placement="bottom" title="Toggle nav")
+						//- span.navbar-toggler-icon(data-toggle="tooltip" data-placement="bottom" title="Toggle nav")
+						span.navbar-toggler-icon
 							span.top-line
 							span.middle-line
 							span.bottom-line
-					form.form-inline.my-2.my-lg-0.form-search
+					form.form-inline.my-2.my-lg-0.form-search.d-none.d-xl-block
 						input.form-control.mr-sm-2.rounded-pill(type='search', placeholder='Search', aria-label='Search')
 						button.btn.form-search-btn(type='submit')
 							i.fa.fa-search.mr-2(aria-hidden='true')
-					a.btn.btn-dark.rounded-pill.btn-sm
+					a.btn.btn-dark.rounded-pill.btn-sm.d-none.d-xl-block
 						i.fa.fa-plus.mr-2(aria-hidden='true')
 						| Add Customer
-					ul.navbar-nav.ml-auto.align-items-center
+					ul.navbar-nav.ml-auto.align-items-center.d-none.d-xl-flex
 						li.nav-item
 							a.nav-link(href='#0') Account
 						li.nav-item

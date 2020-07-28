@@ -35,16 +35,15 @@
 		<div class="header-container">
 			<div class="container-fluid">
 				<nav class="navbar custom-nav navbar-expand-xl"><a class="navbar-brand link-smooth" href="#0">Sitechange</a>
-					<div class="mobile-nav-bg"></div>
-					<div class="navbar-collapse mobile-nav">
-						<button class="navbar-toggler js-navbar-toggler show-menu" type="button"><span class="navbar-toggler-icon" data-toggle="tooltip" data-placement="bottom" title="Toggle nav"><span class="top-line"></span><span class="middle-line"></span><span class="bottom-line"></span></span>
+					<div class="navbar-collapse">
+						<button class="navbar-toggler js-navbar-toggler show-menu" type="button"><span class="navbar-toggler-icon"><span class="top-line"></span><span class="middle-line"></span><span class="bottom-line"></span></span>
 						</button>
-						<form class="form-inline my-2 my-lg-0 form-search">
+						<form class="form-inline my-2 my-lg-0 form-search d-none d-xl-block">
 							<input class="form-control mr-sm-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
 							<button class="btn form-search-btn" type="submit"><i class="fa fa-search mr-2" aria-hidden="true"></i>
 							</button>
-						</form><a class="btn btn-dark rounded-pill btn-sm"><i class="fa fa-plus mr-2" aria-hidden="true"></i>Add Customer</a>
-						<ul class="navbar-nav ml-auto align-items-center">
+						</form><a class="btn btn-dark rounded-pill btn-sm d-none d-xl-block"><i class="fa fa-plus mr-2" aria-hidden="true"></i>Add Customer</a>
+						<ul class="navbar-nav ml-auto align-items-center d-none d-xl-flex">
 							<li class="nav-item"><a class="nav-link" href="#0">Account</a>
 							</li>
 							<li class="nav-item"><a class="nav-link" href="#0">Settings </a>
@@ -69,7 +68,29 @@
 	<!--/ .header-->
 	<!-- .main-->
 	<main class="main js-main">
+		<div class="mobile-nav-bg js-mobile-nav-bg d-xl-none"></div>
 		<div class="sidenav js-sidenav">
+			<div class="mobile-nav d-xl-none">
+				<form class="form-inline mb-3 form-search">
+					<input class="form-control mr-sm-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn form-search-btn" type="submit"><i class="fa fa-search mr-2" aria-hidden="true"></i>
+					</button>
+				</form><a class="btn btn-success rounded-pill btn-sm mb-3"><i class="fa fa-plus mr-2" aria-hidden="true"></i>Add Customer</a>
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link js-nav-link" href="#0">Account</a>
+					</li>
+					<li class="nav-item"><a class="nav-link js-nav-link" href="#0">Settings </a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle user-dropdown" id="userDropdown" href="#0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img class="user-avatar" src="img/user-avatar.jpg" alt="">Bradley Haynes</a>
+						<div class="dropdown-menu" aria-labelledby="userDropdown"><a class="dropdown-item js-nav-link" href="#0">Lorem</a><a class="dropdown-item js-nav-link" href="#0">Lorem ipsum</a>
+							<div class="dropdown-divider"></div><a class="dropdown-item js-nav-link" href="#0">Lorem ipsum dolor</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--/mobile-nav-->
 			<ul class="sidenav-list">
 				<li class="sidenav-item mb-4">
 					<div class="row">
@@ -79,28 +100,28 @@
 						</div>
 					</div>
 				</li>
-				<li class="sidenav-item"><a class="sidenav-link active" href="#0">Home<i class="fa fa-clock-o ml-3" aria-hidden="true"></i></a>
+				<li class="sidenav-item"><a class="sidenav-link js-nav-link active" href="#0">Home<i class="fa fa-clock-o ml-3" aria-hidden="true"></i></a>
 				</li>
-				<li class="sidenav-item"><a class="sidenav-link" href="#0">About</a>
+				<li class="sidenav-item"><a class="sidenav-link js-nav-link" href="#0">About</a>
 				</li>
-				<li class="sidenav-item"><a class="sidenav-link" href="#0">Product</a>
+				<li class="sidenav-item"><a class="sidenav-link js-nav-link" href="#0">Product</a>
 				</li>
-				<li class="sidenav-item"><a class="sidenav-link" href="#0">Blog</a>
+				<li class="sidenav-item"><a class="sidenav-link js-nav-link" href="#0">Blog</a>
 				</li>
-				<li class="sidenav-item"><a class="sidenav-link" href="#0">Custom</a>
+				<li class="sidenav-item"><a class="sidenav-link js-nav-link" href="#0">Custom</a>
 				</li>
-				<li class="sidenav-item"><a class="sidenav-link" href="#0"><i class="fa fa-plus mr-2" aria-hidden="true"></i>Add page</a>
+				<li class="sidenav-item"><a class="sidenav-link js-nav-link" href="#0"><i class="fa fa-plus mr-2" aria-hidden="true"></i>Add page</a>
 				</li>
 			</ul>
 			<!--/sidenav-list-->
 			<ul class="secondary-sidenav-list">
-				<li class="sidenav-item"><a class="sidenav-link" href="#0">Acme Company<i class="fa fa-circle text-success ml-2" aria-hidden="true"></i></a>
+				<li class="sidenav-item"><a class="sidenav-link js-nav-link" href="#0">Acme Company<i class="fa fa-circle text-success ml-2" aria-hidden="true"></i></a>
 				</li>
-				<li class="sidenav-item"><a class="sidenav-link" href="#0">Joe’s Plumbing<i class="fa fa-circle text-success ml-2" aria-hidden="true"></i></a>
+				<li class="sidenav-item"><a class="sidenav-link js-nav-link" href="#0">Joe’s Plumbing<i class="fa fa-circle text-success ml-2" aria-hidden="true"></i></a>
 				</li>
-				<li class="sidenav-item"><a class="sidenav-link" href="#0">Eric’s Electric<i class="fa fa-circle text-success ml-2" aria-hidden="true"></i></a>
+				<li class="sidenav-item"><a class="sidenav-link js-nav-link" href="#0">Eric’s Electric<i class="fa fa-circle text-success ml-2" aria-hidden="true"></i></a>
 				</li>
-				<li class="sidenav-item"><a class="sidenav-link" href="#0">Bill the Builder<i class="fa fa-check ml-2" aria-hidden="true"></i></a>
+				<li class="sidenav-item"><a class="sidenav-link js-nav-link" href="#0">Bill the Builder<i class="fa fa-check ml-2" aria-hidden="true"></i></a>
 				</li>
 			</ul>
 			<!--/sidenav-list-->
@@ -109,11 +130,11 @@
 		<section class="section p-0">
 			<div class="subsection bg-grey">
 				<div class="container">
-					<div class="media align-items-center">
-						<img class="align-self-center mr-4 rounded-circle img-width-60" src="img/media-img.jpg" alt="">
+					<div class="media align-items-center d-block d-sm-flex">
+						<img class="align-self-center mb-3 mb-sm-0 mr-0 mr-sm-4 rounded-circle img-width-60" src="img/media-img.jpg" alt="">
 						<div class="media-body">
 							<h4 class="mt-0">ABC Company</h4>
-							<ul class="list-inline mb-0">
+							<ul class="list-inline mb-3 mb-sm-0">
 								<li class="list-inline-item mr-4"><i class="fa fa-clock-o mr-2" aria-hidden="true"></i>2 hours remaining</li>
 								<li class="list-inline-item mr-4"><i class="fa fa-refresh mr-2" aria-hidden="true"></i>Renews on Nov 3</li>
 								<li class="list-inline-item mr-4"><i class="fa fa-phone mr-2" aria-hidden="true"></i><a href="tel:08000000000">0800 000 0000</a>
@@ -132,9 +153,9 @@
 					<h4 class="smaller mb-5">Change Request #2 to Home Page</h4>
 					<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
 						dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-					<div class="d-flex justify-content-start mb-5">
-						<img class="img-width-200 mr-5" src="img/company-img-01.jpg" alt="">
-						<img class="img-width-200" src="img/company-img-02.jpg" alt="">
+					<div class="images-block mb-4">
+						<img class="img-width-200 m-2" src="img/company-img-01.jpg" alt="">
+						<img class="img-width-200 m-2" src="img/company-img-02.jpg" alt="">
 					</div>
 				</div>
 				<!--/container-->
@@ -179,7 +200,7 @@
 				<!--/container-->
 			</div>
 			<!--/subsection-->
-			<div class="subsection">
+			<div class="subsection pb-0">
 				<div class="container">
 					<form class="form-comment">
 						<div class="form-group">
@@ -189,8 +210,8 @@
 							<input class="custom-control-input" id="customCheck1" type="checkbox">
 							<label class="custom-control-label fw-300" for="customCheck1">Private Comment</label>
 						</div>
-						<button class="btn btn-success rounded-pill mr-4" type="submit">Reply</button>
-						<button class="btn btn-secondary rounded-pill" type="submit">Reply and Complete</button>
+						<button class="btn btn-success rounded-pill mr-4 mb-4" type="submit">Reply</button>
+						<button class="btn btn-secondary rounded-pill mb-4" type="submit">Reply and Complete</button>
 					</form>
 				</div>
 				<!--/container-->
@@ -201,15 +222,15 @@
 					<div class="card">
 						<div class="card-header" id="headingOne">
 							<div class="container">
-								<h2 class="mb-0"><button class="btn btn-link btn-accordion" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-check mr-2" aria-hidden="true"></i><span class="mr-auto">Change Request #1 to Home Page</span><span class="fw-300">Completed on Dec 19, 2017 at 3:59pm</span><i class="fa fa-angle-up ml-2" aria-hidden="true"></i></button></h2>
+								<h2 class="mb-0"><button class="btn btn-link btn-accordion" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-check mr-3" aria-hidden="true"></i><span class="row w-100"><span class="col-md-6 text-left"><span class="mr-auto">Change Request #1 to Home Page</span></span><span class="col-md-6 text-left text-md-right"><span class="fw-300">Completed on Dec 19, 2017 at 3:59pm</span></span></span><!--/row--><i class="fa fa-angle-up ml-3" aria-hidden="true"></i></button></h2>
 							</div>
 						</div>
 						<div class="collapse show" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample">
 							<div class="container">
-								<div class="card-body">
+								<div class="card-body px-0">
 									<p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam ipsa nihil? Aliquid vitae quam corrupti dicta ducimus magnam temporibus accusantium odit quae maiores explicabo blanditiis, deleniti ratione voluptatum. Architecto nobis
 										cumque dolorem eligendi dolore temporibus neque illum quis accusantium ad. Velit cum incidunt cumque esse at explicabo eligendi maxime.</p>
-									<div class="d-flex justify-content-start mb-5">
+									<div class="images-block mb-4">
 										<img class="img-width-200 mr-5" src="img/company-img-01.jpg" alt="">
 										<img class="img-width-200" src="img/company-img-02.jpg" alt="">
 									</div>
@@ -222,15 +243,15 @@
 					<div class="card">
 						<div class="card-header" id="headingTwo">
 							<div class="container">
-								<h2 class="mb-0"><button class="btn btn-link btn-accordion collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-check mr-2" aria-hidden="true"></i><span class="mr-auto">Change Request #2 to Home Page</span><span class="fw-300">Completed on Dec 20, 2017 at 13:59pm</span><i class="fa fa-angle-up ml-2" aria-hidden="true"></i></button></h2>
+								<h2 class="mb-0"><button class="btn btn-link btn-accordion collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-check mr-3" aria-hidden="true"></i><span class="row w-100"><span class="col-md-6 text-left"><span class="mr-auto">Change Request #2 to Home Page</span></span><span class="col-md-6 text-left text-md-right"><span class="fw-300">Completed on Dec 12, 2017 at 4:29pm</span></span></span><!--/row--><i class="fa fa-angle-up ml-3" aria-hidden="true"></i></button></h2>
 							</div>
 						</div>
 						<div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample">
 							<div class="container">
-								<div class="card-body">
+								<div class="card-body px-0">
 									<p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam ipsa nihil? Aliquid vitae quam corrupti dicta ducimus magnam temporibus accusantium odit quae maiores explicabo blanditiis, deleniti ratione voluptatum. Architecto nobis
 										cumque dolorem eligendi dolore temporibus neque illum quis accusantium ad. Velit cum incidunt cumque esse at explicabo eligendi maxime.</p>
-									<div class="d-flex justify-content-start mb-5">
+									<div class="images-block mb-4">
 										<img class="img-width-200 mr-5" src="img/company-img-01.jpg" alt="">
 										<img class="img-width-200" src="img/company-img-02.jpg" alt="">
 									</div>
@@ -243,15 +264,15 @@
 					<div class="card">
 						<div class="card-header" id="headingThree">
 							<div class="container">
-								<h2 class="mb-0"><button class="btn btn-link btn-accordion collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-check mr-2" aria-hidden="true"></i><span class="mr-auto">Change Request #3 to Home Page</span><span class="fw-300">Completed on Dec 21, 2017 at 3:59pm</span><i class="fa fa-angle-up ml-2" aria-hidden="true"></i></button></h2>
+								<h2 class="mb-0"><button class="btn btn-link btn-accordion collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-check mr-3" aria-hidden="true"></i><span class="row w-100"><span class="col-md-6 text-left"><span class="mr-auto">Change Request #3 to Home Page</span></span><span class="col-md-6 text-left text-md-right"><span class="fw-300">Completed on Dec 10, 2017 at 6:49pm</span></span></span><!--/row--><i class="fa fa-angle-up ml-3" aria-hidden="true"></i></button></h2>
 							</div>
 						</div>
 						<div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample">
 							<div class="container">
-								<div class="card-body">
+								<div class="card-body px-0">
 									<p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam ipsa nihil? Aliquid vitae quam corrupti dicta ducimus magnam temporibus accusantium odit quae maiores explicabo blanditiis, deleniti ratione voluptatum. Architecto nobis
 										cumque dolorem eligendi dolore temporibus neque illum quis accusantium ad. Velit cum incidunt cumque esse at explicabo eligendi maxime.</p>
-									<div class="d-flex justify-content-start mb-5">
+									<div class="images-block mb-4">
 										<img class="img-width-200 mr-5" src="img/company-img-01.jpg" alt="">
 										<img class="img-width-200" src="img/company-img-02.jpg" alt="">
 									</div>
