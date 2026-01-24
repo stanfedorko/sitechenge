@@ -8,7 +8,7 @@
   "license": "",
   "devDependencies": {
     "browser-sync": "^2.12.8",
-    "gulp": "^3.9.1",
+    "gulp": "^5.0.1",
     "gulp-cached": "^1.1.1",
     "gulp-clean": "^0.3.2",
     "gulp-filter": "^4.0.0",
