@@ -7,7 +7,7 @@
   "author": "Fedir Kopakov",
   "license": "",
   "devDependencies": {
-    "browser-sync": "^2.12.8",
+    "browser-sync": "^2.29.3",
     "gulp": "^3.9.1",
     "gulp-cached": "^1.1.1",
     "gulp-clean": "^0.3.2",
